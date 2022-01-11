@@ -66,4 +66,17 @@ or
 python test.py build_ext --inplace 
 ```
 
+It will create a moduled named Cython_for , this is our cython code lets call in python code . 
+```yml
+from time import time
+import Cython_for
+
+t1=time()
+Cython_for.for_loop() 
+
+t2=time()
+print("time taken is : ",t2-t1)
+```
+### OUTPUT
+ 
 
