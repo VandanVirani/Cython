@@ -25,7 +25,7 @@ print("time taken is : ",t2-t1)
 ```
 ### OUTPUT
 
-<img src="https://user-images.githubusercontent.com/76767487/148879796-921acf27-6386-4d5e-b05b-5d043f0b6078.jpg" width=700 height=200 />
+<img src="https://user-images.githubusercontent.com/76767487/148879796-921acf27-6386-4d5e-b05b-5d043f0b6078.jpg" width=1000 height=200 />
 
 
 
