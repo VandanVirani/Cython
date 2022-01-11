@@ -7,7 +7,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## LETS TRY WITH EXAMPLE 
 
-### 1) First with normal Python code . 
+### 1) With normal Python code . 
 
 ```yml
 from time import time
@@ -27,5 +27,43 @@ print("time taken is : ",t2-t1)
 
 <img src="https://user-images.githubusercontent.com/76767487/148879796-921acf27-6386-4d5e-b05b-5d043f0b6078.jpg" width=1000 height=100 />
 
+It takes about 60 second in pure python . 
+
+### 2) Now With Cython
+
+we have to install setuptools and cython . open new terminal and write
+```
+pip install cython
+pip install setuptools
+```
+
+then we have to create a Cython_for.pyx file write the below code
+```
+def for_loop():
+    cdef long int k=0,i=0,j=0
+    for i in range(30000):
+        for j in range(30000):
+            k+=1
+    print(k)        
+```
+
+
+we have to create another file named test.py write the below code
+```
+
+from setuptools import setup
+from Cython.Build import cythonize
+
+setup(
+    ext_modules=cythonize("Cython_for.pyx"),
+)
+```
+
+now open terminal and write below code
+```
+py -3 test.py build_ext --inplace # for python 3
+or
+python test.py build_ext --inplace 
+```
 
 
